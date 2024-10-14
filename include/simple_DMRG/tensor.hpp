@@ -274,14 +274,14 @@ public:
      * @param a The row indices.
      * @param b The column indices.
      * @param mergeSV A boolean flag indicating whether to merge U with S or S with V^T.
-     * @param cutoff The truncation cutoff value for singular values (default is 1e-9).
+     * @param cutoff The truncation cutoff value for singular values (default is 1e-10).
      * @param mindim The minimum number of singular values to hold (default is 1).
      * @param maxdim The maximum number of singular values to hold (default is 100).
      * @return A tuple containing the resulting tensors, the singular values, the number of
      * dimensions, and the truncation error.
      */
     std::tuple<Tensor, Tensor, xt::xarray<double, xt::layout_type::column_major>, int, double>
-    svd(std::vector<int> &a, std::vector<int> &b, bool mergeSV = true, double cutoff = 1e-9,
+    svd(std::vector<int> &a, std::vector<int> &b, bool mergeSV = true, double cutoff = 1e-10,
         int mindim = 1, int maxdim = 100);
 
 private:

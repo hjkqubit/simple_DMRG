@@ -30,7 +30,7 @@
  */
 struct solver_params {
     int maxdim = 100;          // maximum link dimension for truncation
-    double cutoff = 1e-12;     // truncation cutoff value for discarding singular values
+    double cutoff = 1e-10;     // truncation cutoff value for discarding singular values
     int lanczos_krylovdim = 3; // dimension of the Krylov subspace during the Lanczos method
     int lanczos_maxiter = 1;   // the number of repeats of the Lanczos algorithm
 };
