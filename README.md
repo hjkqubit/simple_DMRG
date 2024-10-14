@@ -42,7 +42,7 @@ After building the project, one can run the example code `dmrg_heisenerg.cpp` fr
 ./dmrg_heisenberg
 ```
 
-This performs DMRG on the Hamiltonian defined as
+This performs DMRG on the XXZ model in open boundary conditions with its Hamiltonian defined as
 
 $$H = \sum^{L-1}_{i=1}\left(\frac{J}{2}\left(S^+_i S\_{i+1}^- + S^-_i S\_{i+1}^+ \right) + \Delta S_i^z S\_{i+1}^z\right) + h \sum^{L}\_{i=1} S_i^z.$$
 
@@ -65,7 +65,7 @@ One can change the parameters of the model and DMRG procedure as the following:
 ./dmrg_heisenberg -L <L_value> -J <J_value> -Delta <Delta_value> -h <h_value> -nsweeps <nsweeps> -maxdim <maxdim> -cutoff <cutoff>
 ```
 
-For example, we can look at the XXZ model with anisotropy (`J = 1`, `Delta = 1.5`, and `h = 0`) with `L = 100`:
+For example, one can look at the XXZ model with anisotropy (`J = 1`, `Delta = 1.5`, and `h = 0`) with `L = 100`:
 ```bash
 ./dmrg_heisenberg -L 100 -J 1 -Delta 1.5 -h 0 -nsweeps 10 -maxdim 100 -cutoff 1e-9
 sweep: 0, energy = -51.3379, dim = 4
