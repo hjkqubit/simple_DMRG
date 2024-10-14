@@ -16,9 +16,9 @@ HAM::HAM(Sites sites, std::string model_name, std::vector<double> params)
 
     if (model_name == "XXZ") {
         /**
-         * We use MPO representation of the XXZ as decribed in page XX of U. Schollwoeck, The
+         * We use MPO representation of the XXZ as decribed in pagees 59-60 of [U. Schollwoeck, The
          * density-matrix renormalization group in the age of matrix product states, Annals of
-         * Physics 326, 96 (2011).
+         * Physics 326, 96 (2011)] with slight modifications.
          *
          * H = sum^{L-1}_i [(J/2) (S_i^+ S_{i+1}^- + S_i^- S_{i+1}^+)
          *     + Delta S_i^z S_{i+1}^z] + sum_i h S_i^z
